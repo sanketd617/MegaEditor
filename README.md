@@ -19,6 +19,6 @@ Note : While opening multiple files, if total length of all file names do not fi
 
 **Tab shortcuts** <br>
 New tab : `ctrl + n` <br>
-Delete current tab  : `alt + x` <br>
+Close current tab  : `alt + x` <br>
 Next tab : `alt + right arrow` <br>
 Prev tab : `alt + left arrow` <br>

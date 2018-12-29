@@ -12,7 +12,7 @@ class MegaApp:
         if len(argv) > 1:
             filenames = argv[1:]
         else:
-            filenames = [""]
+            filenames = ["untitled"]
 
         self.tabBar = MegaTabBar(filenames, self.window.getmaxyx()[1])
 
