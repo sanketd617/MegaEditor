@@ -1,4 +1,4 @@
-Mega Editor is a command line text editor. It's still under development. <br><br>
+Mega Editor is a command line text editor. It's still under development. README will be modified as new features are added. <br><br>
 
 **Installation** <br>
 The following command will simply download the source code of Mega Editor
