@@ -1,0 +1,34 @@
+#!/usr/bin/env python
+
+import curses
+import curses.panel
+from MegaApp import MegaApp
+
+
+def main(stdscr):
+    y, x = stdscr.getmaxyx()
+    app = MegaApp(y, x)
+
+
+    # window = curses.newwin(3, 30, 0, 0)
+    # window2 = curses.newwin(7, 30, 7, 0)
+    #
+    # window.addstr("Helllo")
+    # window2.addstr("Helllo two")
+    #
+    # panel = curses.panel.new_panel(window)
+    # panel2 = curses.panel.new_panel(window2)
+    #
+    # curses.panel.update_panels()
+    #
+    # curses.doupdate()
+
+    stdscr.getch()
+
+    curses.endwin()
+
+
+
+
+if __name__ == '__main__':
+    curses.wrapper(main)
