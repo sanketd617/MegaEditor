@@ -14,6 +14,8 @@ To run the editor, simple navigate to the cloned directory & run `mega` as shown
 To open files, following syntax can be used: <br>
 `mega [file1] [file2] .... [filen]`
 <br><br>
+Note : While opening multiple files, if total length of all file names do not fit into single line in terminal, Mega Editor will ignore the files that cannot fit.
+<br><br>
 
 **Tab switching** <br>
 Next tab : `alt + right arrow` <br>
