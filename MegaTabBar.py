@@ -17,6 +17,8 @@ class MegaTabBar:
         pos_x = 1
 
         for title in tab_titles:
+            if title == "":
+                title = "untitled"
             self.tabs.append(MegaTab(self.window, index, title, pos_x))
             pos_x = pos_x + len(title) + 3
             index += 1

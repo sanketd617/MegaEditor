@@ -10,7 +10,9 @@ To run the editor, simple navigate to the cloned directory & run `mega` as shown
 `cd /path/to/cloned/directory && ./mega`
 <br> or <br>
 `/path/to/cloned/directory/mega`
-
+<br><br>
+To open files, following syntax can be used: <br>
+`mega [file1] [file2] .... [filen]`
 <br><br>
 
 **Tab switching** <br>
