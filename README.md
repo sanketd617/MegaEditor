@@ -1,3 +1,3 @@
-**Tab switching**
-Next tab : `alt + right arrow`
-Prev tab : `alt + left arrow`
+**Tab switching** <br>
+Next tab : `alt + right arrow` <br>
+Prev tab : `alt + left arrow` <br>
