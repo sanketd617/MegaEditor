@@ -20,18 +20,20 @@ def main(stdscr):
         if ch == 24:
             break
         elif ch == 558:
-            #switch to next tab...alt + right
+            # switch to next tab...alt + right
             app.tabBar.nextTab()
         elif ch == 543:
-            #switch to prev tab...alt + left
+            # switch to prev tab...alt + left
             app.tabBar.prevTab()
+        elif ch == 14:
+            # add new tab...ctrl + n
+            app.tabBar.addTab()
 
         stdscr.addstr(7, 0, "Typed key :         ")
         stdscr.addstr(7, 0, "Typed key : "+str(ch))
         pos_y += 1
 
     curses.endwin()
-
 
 
 if __name__ == '__main__':

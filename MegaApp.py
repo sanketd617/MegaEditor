@@ -3,6 +3,7 @@ import curses
 import curses.panel
 from MegaTabBar import MegaTabBar
 
+
 class MegaApp:
 
     def __init__(self, height, width, argv):

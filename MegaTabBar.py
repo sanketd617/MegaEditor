@@ -13,20 +13,13 @@ class MegaTabBar:
 
         self.panel = curses.panel.new_panel(self.window)
         curses.panel.top_panel()
-        index = 0
-        pos_x = 1
-
-        for title in tab_titles:
-            if title == "":
-                title = "untitled"
-            if pos_x + len(title) + 3 > maxx:
-                break
-            self.tabs.append(MegaTab(self.window, index, title, pos_x))
-            pos_x = pos_x + len(title) + 3
-            index += 1
+        self.index = 0
+        self.pos_x = 1
 
         self.active_tab = 0
-        self.switchTo(0)
+
+        for title in tab_titles:
+            self.addTab(title)
 
         self.draw()
 
@@ -58,3 +51,11 @@ class MegaTabBar:
         prev_index = (self.active_tab + len(self.tabs) - 1) % len(self.tabs)
         self.switchTo(prev_index)
 
+    def addTab(self, title = "untitled"):
+
+        if self.pos_x + len(title) + 3 > self.window.getmaxyx()[1]:
+            return False
+        self.tabs.append(MegaTab(self.window, self.index, title, self.pos_x))
+        self.pos_x = self.pos_x + len(title) + 3
+        self.index += 1
+        self.switchTo(self.index-1)
