@@ -6,7 +6,7 @@ from MegaTab import MegaTab
 
 class MegaTabBar:
 
-    def __init__(self, tabs, maxx):
+    def __init__(self, tab_titles, maxx):
         self.tabs = []
         self.window = curses.newwin(3, maxx)
         self.window.box()
@@ -15,16 +15,16 @@ class MegaTabBar:
         curses.panel.top_panel()
         index = 0
         pos_x = 1
-        is_first = True
-        for text in tabs:
-            self.tabs.append(MegaTab(self.window, index, text, pos_x, is_first))
-            pos_x = pos_x + len(text) + 3
+
+        for title in tab_titles:
+            self.tabs.append(MegaTab(self.window, index, title, pos_x))
+            pos_x = pos_x + len(title) + 3
             index += 1
-            is_first = False
+
+        self.active_tab = 0
+        self.switchTo(0)
 
         self.draw()
-
-        curses.panel.update_panels()
 
     def draw(self):
         is_first = True
@@ -38,5 +38,19 @@ class MegaTabBar:
             tab.draw()
             index += 1
         self.window.refresh()
+        curses.panel.update_panels()
 
+    def switchTo(self, tab_index):
+        self.tabs[self.active_tab].deactivate()
+        self.active_tab = tab_index
+        self.tabs[self.active_tab].activate()
+        self.draw()
+
+    def nextTab(self):
+        next_index = (self.active_tab + 1) % len(self.tabs)
+        self.switchTo(next_index)
+
+    def prevTab(self):
+        prev_index = (self.active_tab + len(self.tabs) - 1) % len(self.tabs)
+        self.switchTo(prev_index)
 

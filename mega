@@ -9,24 +9,24 @@ def main(stdscr):
     y, x = stdscr.getmaxyx()
     app = MegaApp(y, x)
 
+    pos_y = 4
+    while True:
+        ch = stdscr.getch()
 
-    # window = curses.newwin(3, 30, 0, 0)
-    # window2 = curses.newwin(7, 30, 7, 0)
-    #
-    # window.addstr("Helllo")
-    # window2.addstr("Helllo two")
-    #
-    # panel = curses.panel.new_panel(window)
-    # panel2 = curses.panel.new_panel(window2)
-    #
-    # curses.panel.update_panels()
-    #
-    # curses.doupdate()
+        if ch == 24:
+            break
+        elif ch == 558:
+            #switch to next tab...alt + right
+            app.tabBar.nextTab()
+        elif ch == 543:
+            #switch to prev tab...alt + left
+            app.tabBar.prevTab()
 
-    stdscr.getch()
+        stdscr.addstr(7, 0, "Typed key :         ")
+        stdscr.addstr(7, 0, "Typed key : "+str(ch))
+        pos_y += 1
 
     curses.endwin()
-
 
 
 

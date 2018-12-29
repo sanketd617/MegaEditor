@@ -16,3 +16,9 @@ class MegaTab:
             self.window.addstr(1, self.pos_x, " "+self.title+" ", curses.A_REVERSE)
         else:
             self.window.addstr(1, self.pos_x, " "+self.title+" ", curses.A_NORMAL)
+
+    def activate(self):
+        self.is_active = True
+
+    def deactivate(self):
+        self.is_active = False
