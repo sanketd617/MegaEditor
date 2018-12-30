@@ -1,15 +1,21 @@
 
 import curses
 
+from MegaEditor import MegaEditor
+
 
 class MegaTab:
 
-    def __init__(self, window, id, title, pos_x, is_active = False):
+    def __init__(self, maxy, maxx, window, id, title, pos_x, is_active = False):
         self.id = id
         self.title = title
         self.pos_x = pos_x
+        self.maxy = maxy
+        self.maxx = maxx
         self.window = window
         self.is_active = is_active
+        self.editor = MegaEditor(id, self.maxy-6, self.maxx-3, self.title)
+        self.editor_panel = curses.panel.new_panel(self.editor.window)
 
     def draw(self):
         if self.is_active:
@@ -19,6 +25,7 @@ class MegaTab:
 
     def activate(self):
         self.is_active = True
+        self.editor_panel.top()
 
     def deactivate(self):
         self.is_active = False

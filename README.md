@@ -19,7 +19,7 @@ Note : While opening multiple files, if total length of all file names do not fi
 
 **Shortcuts** <br>
 New tab : `alt + n` <br>
-Close current tab  : `alt + x` <br>
+Close current tab  : `ctrl + x` <br>
 Next tab : `alt + right arrow` <br>
 Prev tab : `alt + left arrow` <br>
-
+Exit : `ctrl + e`

@@ -6,7 +6,7 @@ from MegaTab import MegaTab
 
 class MegaTabBar:
 
-    def __init__(self, tab_titles, maxx):
+    def __init__(self, tab_titles, maxy, maxx):
         self.tabs = []
         self.tab_titles = [] + tab_titles
         self.window = curses.newwin(3, maxx)
@@ -15,7 +15,8 @@ class MegaTabBar:
         curses.panel.top_panel()
         self.index = 0
         self.pos_x = 1
-
+        self.maxx = maxx
+        self.maxy = maxy
         self.active_tab = 0
 
         self.setupTabs()
@@ -53,8 +54,14 @@ class MegaTabBar:
         next_index = (self.active_tab + 1) % len(self.tabs)
         self.switchTo(next_index)
 
+        # work around for cases where tab isn't switched
+        self.switchTo(next_index)
+
     def prevTab(self):
         prev_index = (self.active_tab + len(self.tabs) - 1) % len(self.tabs)
+        self.switchTo(prev_index)
+
+        # work around for cases where tab isn't switched
         self.switchTo(prev_index)
 
     def addTab(self, title = "untitled", concat_tab_titles = True, switch_to_new = True):
@@ -62,7 +69,7 @@ class MegaTabBar:
             return False
         if concat_tab_titles:
             self.tab_titles += [title]
-        self.tabs += [MegaTab(self.window, self.index, title, self.pos_x)]
+        self.tabs += [MegaTab(self.maxy, self.maxx, self.window, self.index, title, self.pos_x)]
         self.pos_x = self.pos_x + len(title) + 3
         self.index += 1
         if switch_to_new:
@@ -81,3 +88,6 @@ class MegaTabBar:
 
             self.tabs[self.active_tab].activate()
             self.draw()
+
+    def getActiveEditor(self):
+        return self.tabs[self.active_tab].editor
