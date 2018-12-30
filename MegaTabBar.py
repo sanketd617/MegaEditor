@@ -20,8 +20,6 @@ class MegaTabBar:
 
         self.setupTabs()
 
-        self.draw()
-
     def setupTabs(self):
         self.tabs = []
         self.pos_x = 1

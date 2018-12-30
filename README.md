@@ -17,8 +17,9 @@ To open files, following syntax can be used: <br>
 Note : While opening multiple files, if total length of all file names do not fit into single line in terminal, Mega Editor will ignore the files that cannot fit.
 <br><br>
 
-**Tab shortcuts** <br>
-New tab : `ctrl + n` <br>
+**Shortcuts** <br>
+New tab : `alt + n` <br>
 Close current tab  : `alt + x` <br>
 Next tab : `alt + right arrow` <br>
 Prev tab : `alt + left arrow` <br>
+

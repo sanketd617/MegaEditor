@@ -4,9 +4,9 @@ import curses
 
 class MegaTab:
 
-    def __init__(self, window, id, filename, pos_x, is_active = False):
+    def __init__(self, window, id, title, pos_x, is_active = False):
         self.id = id
-        self.title = filename
+        self.title = title
         self.pos_x = pos_x
         self.window = window
         self.is_active = is_active

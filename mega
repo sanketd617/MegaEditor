@@ -14,13 +14,13 @@ def main(stdscr):
 
     app = MegaApp(y, x, sys.argv)
 
-    stdscr.addstr(8, 0, "                                                                                      ")
-    stdscr.addstr(8, 0, str(app.tabBar.tab_titles))
+    # stdscr.addstr(8, 0, "                                                                                      ")
+    # stdscr.addstr(8, 0, str(app.tabBar.tab_titles))
 
     while True:
         ch = stdscr.getch()
 
-        if ch == 24:
+        if ch == 81 or ch == 113:
             break
         elif ch == 558:
             # switch to next tab...alt + right
@@ -28,17 +28,19 @@ def main(stdscr):
         elif ch == 543:
             # switch to prev tab...alt + left
             app.tabBar.prevTab()
-        elif ch == 14:
+        elif ch == 110 or ch == 78:
             # add new tab...ctrl + n
             app.tabBar.addTab()
         elif ch == 88 or ch == 120:
             # delete active tab...alt + x / alt + X
             app.tabBar.closeTab()
+        elif ch == curses.KEY_RESIZE:
+            main(stdscr)
 
-        stdscr.addstr(7, 0, "Typed key :         ")
-        stdscr.addstr(7, 0, "Typed key : "+str(ch))
-        stdscr.addstr(8, 0, "                                                                                      ")
-        stdscr.addstr(8, 0, str(app.tabBar.active_tab))
+        # stdscr.addstr(7, 0, "Typed key :         ")
+        # stdscr.addstr(7, 0, "Typed key : "+str(ch))
+        # stdscr.addstr(8, 0, "                                                                                      ")
+        # stdscr.addstr(8, 0, str(app.tabBar.active_tab))
         pos_y += 1
 
     curses.endwin()

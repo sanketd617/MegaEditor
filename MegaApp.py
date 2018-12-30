@@ -2,6 +2,8 @@
 import curses
 import curses.panel
 from MegaTabBar import MegaTabBar
+from MegaLineNums import MegaLineNums
+from MegaBottomPanel import MegaBottomPanel
 
 
 class MegaApp:
@@ -14,7 +16,13 @@ class MegaApp:
         else:
             filenames = ["untitled"]
 
-        self.tabBar = MegaTabBar(filenames, self.window.getmaxyx()[1])
+        options = [["new", 0], ["open", 0], ["save", 0], ["quit", 0]]
 
+        self.tabBar = MegaTabBar(filenames, self.window.getmaxyx()[1])
+        self.lineNums = MegaLineNums(height-4, 25)
+        self.bottomPanel = MegaBottomPanel(options, height, width)
+
+    def addLine(self):
+        self.lineNums.add()
 
 
