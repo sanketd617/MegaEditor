@@ -4,7 +4,7 @@ import sys
 import curses
 import curses.panel
 from MegaApp import MegaApp
-
+from MegaLineNums import MegaLineNums
 
 def main(stdscr):
     # curses.curs_set(0)
@@ -25,47 +25,60 @@ def main(stdscr):
         # stdscr.addstr(7, 0, "Typed key : a        ")
         # stdscr.addstr(7, 0, "Typed key : "+str(ch))
 
-        if ch == 5:
-            # exit...ctrl + e
-            break
-        elif ch == 558:
-            # switch to next tab...alt + right
-            app.tabBar.nextTab()
-        elif ch == 543:
-            # switch to prev tab...alt + left
-            app.tabBar.prevTab()
-        elif ch == 14:
-            # add new tab...ctrl + n
-            app.tabBar.addTab()
-        elif ch == 24:
-            # delete active tab...ctrl + x
-            app.tabBar.closeTab()
-        elif ch == curses.KEY_LEFT:
-            # handle left arrow key
-            app.tabBar.getActiveEditor().moveLeft()
-        elif ch == curses.KEY_UP:
-            # handle left arrow key
-            app.tabBar.getActiveEditor().moveUp()
-        elif ch == curses.KEY_DOWN:
-            # handle left arrow key
-            app.tabBar.getActiveEditor().moveDown()
-        elif ch == curses.KEY_RIGHT:
-            # handle left arrow key
-            app.tabBar.getActiveEditor().moveRight()
-        elif ch == curses.KEY_BACKSPACE:
-            # delete charcter before current cursor position
-            app.tabBar.getActiveEditor().backspace()
-        elif ch == curses.KEY_DC:
-            # delete charcter after current cursor position
-            app.tabBar.getActiveEditor().delete()
-        elif ch == curses.KEY_RESIZE:
-            main(stdscr)
+        if ch == 10:
+            app.lineNums = MegaLineNums(y-6, len(app.tabBar.getActiveEditor().lines)+1)
         else:
-            app.tabBar.getActiveEditor().write(chr(ch))
+            app.lineNums = MegaLineNums(y-6, len(app.tabBar.getActiveEditor().lines))
 
-        # stdscr.addstr(8, 0, "                                                                                      ")
-        # stdscr.addstr(8, 0, str(app.tabBar.active_tab))
-        pos_y += 1
+
+        try:
+            if ch == 5:
+                # exit...ctrl + e
+                break
+            elif ch == 23:
+                # save/write...ctrl + w
+                app.tabBar.getActiveEditor().save()
+            elif ch == 558:
+                # switch to next tab...alt + right
+                app.tabBar.nextTab()
+            elif ch == 543:
+                # switch to prev tab...alt + left
+                app.tabBar.prevTab()
+            elif ch == 14:
+                # add new tab...ctrl + n
+                app.tabBar.addTab()
+            elif ch == 24:
+                # delete active tab...ctrl + x
+                app.tabBar.closeTab()
+            elif ch == curses.KEY_LEFT:
+                # handle left arrow key
+                app.tabBar.getActiveEditor().moveLeft()
+            elif ch == curses.KEY_UP:
+                # handle left arrow key
+                app.tabBar.getActiveEditor().moveUp()
+            elif ch == curses.KEY_DOWN:
+                # handle left arrow key
+                app.tabBar.getActiveEditor().moveDown()
+            elif ch == curses.KEY_RIGHT:
+                # handle left arrow key
+                app.tabBar.getActiveEditor().moveRight()
+            elif ch == curses.KEY_BACKSPACE:
+                # delete charcter before current cursor position
+                app.tabBar.getActiveEditor().backspace()
+            elif ch == curses.KEY_DC:
+                # delete charcter after current cursor position
+                app.tabBar.getActiveEditor().delete()
+            elif ch == curses.KEY_RESIZE:
+                main(stdscr)
+            else:
+                app.tabBar.getActiveEditor().write(chr(ch))
+
+        except:
+            app.bottomPanel.window.addstr(1, x-6, "Error")
+
+    # stdscr.addstr(8, 0, "                                                                                      ")
+    # stdscr.addstr(8, 0, str(app.tabBar.active_tab))
+    pos_y += 1
 
     curses.endwin()
 

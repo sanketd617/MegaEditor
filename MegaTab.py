@@ -8,13 +8,17 @@ class MegaTab:
 
     def __init__(self, maxy, maxx, window, id, title, pos_x, is_active = False):
         self.id = id
-        self.title = title
+        index = title.rfind("/")
+        if index == -1:
+            self.title = title
+        else:
+            self.title = title[index+1:]
         self.pos_x = pos_x
         self.maxy = maxy
         self.maxx = maxx
         self.window = window
         self.is_active = is_active
-        self.editor = MegaEditor(id, self.maxy-6, self.maxx-3, self.title)
+        self.editor = MegaEditor(id, self.maxy-6, self.maxx-3, title)
         self.editor_panel = curses.panel.new_panel(self.editor.window)
 
     def draw(self):

@@ -13,6 +13,7 @@ class MegaEditor:
         self.window = curses.newwin(maxy, maxx, 3, 4)
         self.window.refresh()
         self.lines = [""]
+        self.file = file
 
     def write(self, c):
         if ord(c) == 10:
@@ -23,8 +24,12 @@ class MegaEditor:
             self.curr_x = 0
             self.curr_y += 1
         else:
-            self.lines[self.curr_y] = self.lines[self.curr_y][:self.curr_x] + c + self.lines[self.curr_y][self.curr_x:]
-            self.curr_x += 1
+            if ord(c) == 9:
+                self.lines[self.curr_y] = self.lines[self.curr_y][:self.curr_x] + "    " + self.lines[self.curr_y][self.curr_x:]
+                self.curr_x += 4
+            else:
+                self.lines[self.curr_y] = self.lines[self.curr_y][:self.curr_x] + c + self.lines[self.curr_y][self.curr_x:]
+                self.curr_x += 1
 
         self.write_lines()
         self.window.refresh()
@@ -121,3 +126,10 @@ class MegaEditor:
             self.curr_x = len(self.lines[self.curr_y])
         self.window.move(self.curr_y, self.curr_x)
         self.window.refresh()
+
+    def save(self):
+        file = open(self.file, "w+")
+        for line in self.lines:
+            file.write(line+"\r\n")
+
+        file.close()
