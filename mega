@@ -69,7 +69,8 @@ def main(stdscr):
                 # delete charcter after current cursor position
                 app.tabBar.getActiveEditor().delete()
             elif ch == curses.KEY_RESIZE:
-                main(stdscr)
+                y, x = stdscr.getmaxyx()
+                app.resize(y, x)
             else:
                 app.tabBar.getActiveEditor().write(chr(ch))
 

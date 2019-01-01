@@ -15,6 +15,9 @@ class MegaEditor:
         self.lines = [""]
         self.file = file
 
+    def resize(self, y, x):
+        self.window.resize(y, x)
+
     def write(self, c):
         if ord(c) == 10:
             part_one = self.lines[self.curr_y][:self.curr_x]

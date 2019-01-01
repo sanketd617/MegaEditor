@@ -14,6 +14,9 @@ class MegaBottomPanel:
         self.setupTabs()
         self.window.refresh()
 
+    def resize(self, x):
+        self.window.resize(3, x)
+
     def setupTabs(self):
         pos_x = 1
         index = 0

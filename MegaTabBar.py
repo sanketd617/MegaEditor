@@ -21,6 +21,10 @@ class MegaTabBar:
 
         self.setupTabs()
 
+    def resize(self, x):
+        self.window.resize(3, x)
+        self.maxx = x
+
     def setupTabs(self):
         self.tabs = []
         self.pos_x = 1

@@ -23,6 +23,9 @@ class MegaLineNums:
 
         self.window.refresh()
 
+    def resize(self, y):
+        self.window.resize(y, 3)
+
     def add(self):
         self.num_lines += 1
         self.window.addstr((" "*(3-len(str(self.num_lines))))+str(self.num_lines), curses.color_pair(self.COLOR_PAIR))
