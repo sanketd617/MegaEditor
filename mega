@@ -15,7 +15,7 @@ def main(stdscr):
     pos_y = 4
 
     app = MegaApp(y, x, sys.argv)
-
+    app.tabBar.getActiveEditor().focus()
     while True:
         ch = stdscr.getch()
 
@@ -78,4 +78,5 @@ def main(stdscr):
 
 
 if __name__ == '__main__':
+    # curses.setlocale(curses.LC_ALL, "")
     curses.wrapper(main)

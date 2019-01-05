@@ -2,12 +2,12 @@
 import curses
 import curses.panel
 
+import os.path
+
 class MegaEditor:
 
     def __init__(self, id, maxy, maxx, file):
         self.id = id
-        self.curr_y = 0
-        self.curr_x = 0
         self.maxx = maxx
         self.maxy = maxy
         self.window = curses.newwin(maxy, maxx, 3, 1)
@@ -16,6 +16,16 @@ class MegaEditor:
         self.file = file
         self.start_y = 0
         self.line_index = 0
+
+        self.init_lines()
+        self.start_y = 0
+        self.curr_y = 0
+        self.curr_x = 0
+        self.write_lines()
+
+    def init_lines(self):
+        if os.path.isfile(self.file):
+            self.lines = [line.rstrip('\n') for line in open(self.file)]
 
     def focus(self):
         self.window.move(self.curr_y, self.curr_x)

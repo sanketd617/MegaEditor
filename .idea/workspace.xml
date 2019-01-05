@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14da42bd-dec6-442f-aa49-bd8faf34e1e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MegaApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/MegaApp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MegaBottomPanel.py" beforeDir="false" afterPath="$PROJECT_DIR$/MegaBottomPanel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MegaEditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/MegaEditor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MegaLineNums.py" beforeDir="false" afterPath="$PROJECT_DIR$/MegaLineNums.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MegaTab.py" beforeDir="false" afterPath="$PROJECT_DIR$/MegaTab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MegaTabBar.py" beforeDir="false" afterPath="$PROJECT_DIR$/MegaTabBar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mega" beforeDir="false" afterPath="$PROJECT_DIR$/mega" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MegaApp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+            <state relative-caret-position="380">
+              <caret line="20" column="102" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="102" />
               <folding>
                 <element signature="e#1#14#0" expanded="true" />
               </folding>
@@ -46,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MegaBottomPanel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="82" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
+            <state relative-caret-position="456">
+              <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
               <folding>
                 <element signature="e#25#38#0" expanded="true" />
               </folding>
@@ -67,7 +62,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MegaTabBar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="686">
+            <state relative-caret-position="1938">
               <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
             </state>
           </provider>
@@ -76,20 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MegaEditor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2373">
-              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-              <folding>
-                <element signature="e#1#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MegaTab.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+            <state relative-caret-position="380">
+              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
               <folding>
                 <element signature="e#1#14#0" expanded="true" />
               </folding>
@@ -98,10 +81,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MegaTab.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="21" column="70" lean-forward="true" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+              <folding>
+                <element signature="e#1#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mega">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+            <state relative-caret-position="724">
+              <caret line="81" column="24" lean-forward="true" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
               <folding>
                 <element signature="e#23#33#0" expanded="true" />
               </folding>
@@ -141,12 +136,12 @@
         <option value="$PROJECT_DIR$/MegaBottomTab.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/MegaLineNums.py" />
-        <option value="$PROJECT_DIR$/MegaApp.py" />
-        <option value="$PROJECT_DIR$/MegaEditor.py" />
-        <option value="$PROJECT_DIR$/MegaBottomPanel.py" />
         <option value="$PROJECT_DIR$/MegaTabBar.py" />
-        <option value="$PROJECT_DIR$/mega" />
         <option value="$PROJECT_DIR$/MegaTab.py" />
+        <option value="$PROJECT_DIR$/MegaBottomPanel.py" />
+        <option value="$PROJECT_DIR$/MegaEditor.py" />
+        <option value="$PROJECT_DIR$/MegaApp.py" />
+        <option value="$PROJECT_DIR$/mega" />
       </list>
     </option>
   </component>
@@ -218,7 +213,7 @@
       <workItem from="1546146827071" duration="26526000" />
       <workItem from="1546316870229" duration="8802000" />
       <workItem from="1546379390866" duration="1625000" />
-      <workItem from="1546666748216" duration="10192000" />
+      <workItem from="1546666748216" duration="13170000" />
     </task>
     <task id="LOCAL-00001" summary="New tabs can be added">
       <created>1546113340043</created>
@@ -262,11 +257,32 @@
       <option name="project" value="LOCAL" />
       <updated>1546668039210</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Line numbers removed..asterisk added when file is modified">
+      <created>1546692349250</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1546692349250</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Line numbers removed..asterisk added when file is modified">
+      <created>1546692425911</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1546692425911</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Cursor position fix">
+      <created>1546693082106</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1546693082106</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62736000" />
+    <option name="totallyTimeSpent" value="65714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1036" extended-state="6" />
@@ -315,7 +331,9 @@
     <MESSAGE value="Fixed bugs" />
     <MESSAGE value="Tabs == 4 spaces" />
     <MESSAGE value="y-scrolling working great..!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="y-scrolling working great..!!" />
+    <MESSAGE value="Line numbers removed..asterisk added when file is modified" />
+    <MESSAGE value="Cursor position fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cursor position fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -338,20 +356,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MegaBottomTab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MegaBottomPanel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="82" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
+        <state relative-caret-position="456">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MegaApp.py">
+    <entry file="file://$PROJECT_DIR$/MegaTab.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+        <state relative-caret-position="399">
+          <caret line="21" column="70" lean-forward="true" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
           <folding>
             <element signature="e#1#14#0" expanded="true" />
           </folding>
@@ -360,8 +385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MegaEditor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2373">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        <state relative-caret-position="380">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
           <folding>
             <element signature="e#1#14#0" expanded="true" />
           </folding>
@@ -370,34 +395,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MegaTabBar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
+        <state relative-caret-position="1938">
           <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MegaApp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="102" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="102" />
+          <folding>
+            <element signature="e#1#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mega">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+        <state relative-caret-position="724">
+          <caret line="81" column="24" lean-forward="true" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
           <folding>
             <element signature="e#23#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MegaBottomTab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MegaTab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
-          <folding>
-            <element signature="e#1#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
