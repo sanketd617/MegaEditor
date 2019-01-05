@@ -53,9 +53,11 @@ def main(stdscr):
                 app.tabBar.getActiveEditor().moveRight()
             elif ch == curses.KEY_BACKSPACE:
                 # delete charcter before current cursor position
+                app.tabBar.makeDirty()
                 app.tabBar.getActiveEditor().backspace()
             elif ch == curses.KEY_DC:
                 # delete charcter after current cursor position
+                app.tabBar.makeDirty()
                 app.tabBar.getActiveEditor().delete()
             elif ch == curses.KEY_RESIZE:
                 y, x = stdscr.getmaxyx()

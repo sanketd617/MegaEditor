@@ -14,12 +14,19 @@ class MegaBottomPanel:
         self.tabs = []
         self.setupTabs()
         self.window.refresh()
+        self.line_x = ""
+        self.linx_y = ""
 
     def resize(self, x):
         self.window.resize(3, x)
 
     def printLineNo(self, y, x):
+        l = len(str(self.line_x)+str(self.linx_y))
+        self.window.addstr(1, self.maxx - l - 3, " "*l)
+
         self.window.addstr(1, self.maxx - len(str(x)+str(y)) - 3, str(y)+","+str(x))
+        self.line_x = x
+        self.linx_y = y
         self.window.refresh()
 
     def setupTabs(self):
