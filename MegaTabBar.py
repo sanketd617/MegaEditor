@@ -95,3 +95,13 @@ class MegaTabBar:
 
     def getActiveEditor(self):
         return self.tabs[self.active_tab].editor
+
+    def makeDirty(self):
+        if not self.tabs[self.active_tab].is_dirty:
+            self.tabs[self.active_tab].is_dirty = True
+            self.draw()
+
+    def makeClean(self):
+        if self.tabs[self.active_tab].is_dirty:
+            self.tabs[self.active_tab].is_dirty = False
+            self.draw()

@@ -7,6 +7,7 @@ from MegaBottomTab import MegaBottomTab
 class MegaBottomPanel:
 
     def __init__(self, options, maxy, maxx):
+        self.maxx = maxx
         self.window = curses.newwin(3, maxx, maxy - 3, 0)
         self.window.box()
         self.options = options
@@ -16,6 +17,10 @@ class MegaBottomPanel:
 
     def resize(self, x):
         self.window.resize(3, x)
+
+    def printLineNo(self, y, x):
+        self.window.addstr(1, self.maxx - len(str(x)+str(y)) - 3, str(y)+","+str(x))
+        self.window.refresh()
 
     def setupTabs(self):
         pos_x = 1

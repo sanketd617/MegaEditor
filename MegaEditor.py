@@ -10,12 +10,16 @@ class MegaEditor:
         self.curr_x = 0
         self.maxx = maxx
         self.maxy = maxy
-        self.window = curses.newwin(maxy, maxx, 3, 4)
+        self.window = curses.newwin(maxy, maxx, 3, 1)
         self.window.refresh()
         self.lines = [""]
         self.file = file
         self.start_y = 0
         self.line_index = 0
+
+    def focus(self):
+        self.window.move(self.curr_y, self.curr_x)
+        self.window.refresh()
 
     def resize(self, y, x):
         self.window.resize(y, x)
@@ -113,7 +117,6 @@ class MegaEditor:
                     self.curr_y -= 1
                 else:
                     self.start_y -= 1
-                self.line_index = self.start_y + self.curr_y
                 self.curr_x = len(self.lines[self.line_index])
         else:
             self.curr_x -= 1

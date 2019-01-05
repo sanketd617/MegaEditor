@@ -4,9 +4,10 @@ import curses.panel
 
 class MegaLineNums:
 
-    def __init__(self, maxy, start = 1, end = 1):
-        self.num_lines = start-1
-        self.window = curses.newwin(maxy, 3, 3, 0)
+    def __init__(self, maxy, start = 1, n = 1):
+        self.curr_line = 0
+        self.maxx = 4
+        self.window = curses.newwin(maxy, self.maxx, 3, 0)
 
         self.BG = 241
         self.FG = 236
@@ -15,20 +16,21 @@ class MegaLineNums:
         curses.use_default_colors()
         curses.init_pair(self.COLOR_PAIR, self.BG, self.FG)
 
-        t = min(start + end, maxy)
+        end = start + n - 1
 
-        for i in range(start, t):
-            self.num_lines += 1
-            self.window.addstr((i-start), 0, (" "*(3-len(str(self.num_lines))))+str(self.num_lines), curses.color_pair(self.COLOR_PAIR))
+        line_num = start
 
-        for i in range(self.num_lines+1, maxy):
-            self.window.addstr("   ", curses.color_pair(2))
+        while line_num <= end:
+            self.window.addstr(self.curr_line, 0, (" "*(self.maxx - len(str(line_num)) - 1)) + str(line_num), curses.color_pair(self.COLOR_PAIR))
+            line_num += 1
+            self.curr_line += 1
+
+        while line_num <= maxy:
+            self.window.addstr(self.curr_line, 0, " "*(self.maxx-1), curses.color_pair(self.COLOR_PAIR))
+            line_num += 1
+            self.curr_line += 1
 
         self.window.refresh()
 
     def resize(self, y):
-        self.window.resize(y, 3)
-
-    def add(self):
-        self.num_lines += 1
-        self.window.addstr((" "*(3-len(str(self.num_lines))))+str(self.num_lines), curses.color_pair(self.COLOR_PAIR))
+        self.window.resize(y, self.maxx)

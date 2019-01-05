@@ -18,14 +18,21 @@ class MegaTab:
         self.maxx = maxx
         self.window = window
         self.is_active = is_active
-        self.editor = MegaEditor(id, self.maxy-6, self.maxx-3, title)
+        self.editor = MegaEditor(id, self.maxy-6, self.maxx-2, title)
         self.editor_panel = curses.panel.new_panel(self.editor.window)
+        self.is_dirty = False
 
     def draw(self):
         if self.is_active:
-            self.window.addstr(1, self.pos_x, " "+self.title+" ", curses.A_REVERSE)
+            if self.is_dirty:
+                self.window.addstr(1, self.pos_x, ""+self.title+"* ", curses.A_REVERSE)
+            else:
+                self.window.addstr(1, self.pos_x, " "+self.title+" ", curses.A_REVERSE)
         else:
-            self.window.addstr(1, self.pos_x, " "+self.title+" ", curses.A_NORMAL)
+            if self.is_dirty:
+                self.window.addstr(1, self.pos_x, ""+self.title+"* ", curses.A_NORMAL)
+            else:
+                self.window.addstr(1, self.pos_x, " "+self.title+" ", curses.A_NORMAL)
 
     def activate(self):
         self.is_active = True

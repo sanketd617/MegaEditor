@@ -19,7 +19,7 @@ class MegaApp:
         options = [["new", 0], ["open", 0], ["write", 0], ["exit", 0]]
 
         self.tabBar = MegaTabBar(self.filenames, self.window.getmaxyx()[0], self.window.getmaxyx()[1])
-        self.lineNums = MegaLineNums(height-4, 1, 1)
+        # self.lineNums = MegaLineNums(height-4, 1, 1)
         self.bottomPanel = MegaBottomPanel(options, height, width)
 
     def addLine(self):
