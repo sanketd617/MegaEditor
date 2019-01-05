@@ -22,13 +22,10 @@ def main(stdscr):
     while True:
         ch = stdscr.getch()
 
-        # stdscr.addstr(7, 0, "Typed key : a        ")
-        # stdscr.addstr(7, 0, "Typed key : "+str(ch))
-
-        if ch == 10:
-            app.lineNums = MegaLineNums(y-6, len(app.tabBar.getActiveEditor().lines)+1)
-        else:
-            app.lineNums = MegaLineNums(y-6, len(app.tabBar.getActiveEditor().lines))
+        # if ch == 10:
+        #     app.lineNums = MegaLineNums(y-6, app.tabBar.getActiveEditor().start_y + 1, len(app.tabBar.getActiveEditor().lines) + 1 - app.tabBar.getActiveEditor().start_y)
+        # else:
+        #     app.lineNums = MegaLineNums(y-6, app.tabBar.getActiveEditor().start_y + 1, len(app.tabBar.getActiveEditor().lines))
 
 
         try:
